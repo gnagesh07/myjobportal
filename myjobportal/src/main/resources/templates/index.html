@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Job Horizon</title>
+
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/font-awesome.min.css}"/>
+
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}"/>
+
+  <meta charset="ISO-8859-1">
+
+  <style>
+
+    .welcome-message {
+
+      text-align: center;
+
+      font-size: 2.5em;
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      color: white;
+
+      margin-top: 100px;
+
+      font-weight: 500;
+
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      /* Remove nowrap to allow wrapping */
+
+      overflow: hidden; /* Keep this for the animation */
+
+    }
+
+
+
+    .welcome-message span {
+
+      display: block; /* Changed to block to force each span onto a new line */
+
+      animation: slideIn 1.5s ease-out forwards;
+
+      opacity: 0;
+
+    }
+
+
+
+    @keyframes slideIn {
+
+      0% {
+
+        transform: translateX(-100%);
+
+        opacity: 0;
+
+      }
+
+      100% {
+
+        transform: translateX(0);
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+
+    .welcome-message span:nth-child(2) {
+
+      animation-delay: 0.75s;
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .welcome-message {
+
+        font-size: 1.8em;
+
+        margin-top: 50px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body class="background">
+
+<nav class="main_div">
+
+  <div class="logo_left">
+
+    <label class="logo">jobhorizon</label>
+
+    <label class="logo_com">.com</label>
+
+  </div>
+
+  <div class="logo_right">
+
+    <label class="Candidate_login_btn">
+
+      <a th:href="@{/login}">Job Candidate Login</a>
+
+      <a th:href="@{/register}">/Register</a>
+
+    </label>
+
+    <label class="Recruiter_login_btn">
+
+      <a th:href="@{/login}">Recruiter Login</a>
+
+      <a th:href="@{/register}">/Register</a>
+
+    </label>
+
+  </div>
+
+</nav>
+
+
+
+<div class="welcome-message">
+
+  <span>Find Your Dream Job Today!</span>
+
+  <span>Explore Opportunities and Build Your Future.</span>
+
+</div>
+
+
+
+<footer>
+
+  <label class="copy-right">Copyright © jobhorizon.com</label>
+
+</footer>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>
+
